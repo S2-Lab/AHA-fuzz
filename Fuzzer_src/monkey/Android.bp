@@ -1,0 +1,30 @@
+// Copyright 2008 The Android Open Source Project
+//
+
+package {
+    // See: http://go/android-license-faq
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+//###############################################################
+java_binary {
+    name: "monkey",
+    srcs: ["**/*.java"],
+    wrapper: "monkey",
+}
+
+// cc_library {
+//     name: "monkey_native",
+//     srcs: ["jni/native.cpp"],
+//     shared_libs: ["liblog"],
+//     stl: "libc++",
+//     sdk_version: "current",
+// }
+
+// java_binary {
+//     name: "monkey",
+//     srcs: ["**/*.java"],
+//     jni_libs: [":monkey_native"],
+//     wrapper: "monkey",
+// }
+

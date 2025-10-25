@@ -1,0 +1,103 @@
+# AHAFuzz .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# AHAFuzz specific
+*.pkl
+*.txt
+tmp_*
+result/
+output/
+*.log
+*.oat
+*.odex
+mapping.txt
+bpf_output*.json
+DuplicatedData.txt
+result_addr.txt
+antianalysisLog.txt
+intentLog.txt
+taint_result.txt
+tmp_packageName*.txt
+tmp_targetUID*.txt
+oatdump_*.txt
+tmp_HookInfo*.pkl
+tmp_MethodIdxInfo*.pkl
+tmp_AddrFrameworkMapping.txt
+
+# Android/Emulator specific
+*.avd/
+*.ini
+*.img
+*.lock
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Results and outputs
+results/
+evaluation/
+crash_results/
+analysis_results/
+result1/
+result2/
+result2/
+reports/
+script/download*
+prebuilt/debug.jar
+run.py
+obj_recover/parse_oat_log.py
+ebpf_tracer/AHAFuzz_debug.py
+ebpf_tracer/AHAFuzz_with_AOT.py
+ebpf_tracer/AHAFuzz_without_debug.py
+AHAFuzz_CCS25.pdf
+*.log
+*.json
+*.txt

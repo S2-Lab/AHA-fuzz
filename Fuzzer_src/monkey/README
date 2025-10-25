@@ -1,0 +1,36 @@
+# AHAFuzz Intent Fuzzer
+
+## Overview
+This project contains the intent fuzzer component of AHAFuzz, an Android GUI fuzzing framework that uses eBPF feedback for intelligent intent mutation.
+
+## Modified Files
+
+### Core Implementation
+- **`monkey/src/com/android/commands/monkey/MonkeySourceApe.java`** (2,427 lines)
+  - Main fuzzing engine integrating APE GUI fuzzing with AHAFuzz intent fuzzing
+  - Handles eBPF feedback processing and GUI/Intent event scheduling
+
+- **`monkey/src/com/android/commands/monkey/ahafuzz/AHAIntentEvent.java`** (415 lines)
+  - Intent event generation based on eBPF feedback
+  - Processes symbol tables and hint tables for intelligent mutation
+
+### Mutation Components
+- **`monkey/src/com/android/commands/monkey/Mutation.java`** (901 lines)
+  - Core mutation algorithms for various data types (int, long, float, double, byte, char, string)
+  - Bit flip, arithmetic, and byte swap mutations
+
+- **`monkey/src/com/android/commands/monkey/IntentMutation.java`** (770 lines)
+  - Intent-specific mutation logic
+  - Handles Intent extras, URIs, and telephony-related mutations
+
+## Build Instructions
+
+```bash
+# Setup environment
+source build/envsetup.sh
+lunch aosp_arm-eng
+
+# Build
+cd /home/jsy01/aosp_13/development/cmds
+mma
+```
